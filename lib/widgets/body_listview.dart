@@ -9,22 +9,6 @@ class BodyListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> appBarImageList = [
-      ImageString.appBarListImage1,
-      ImageString.appBarListImage2,
-      ImageString.appBarListImage3,
-      ImageString.appBarListImage1,
-      ImageString.appBarListImage2,
-      ImageString.appBarListImage3,
-    ];
-    List<String> appBarLogoList = [
-      ImageString.appBarListLogo1,
-      ImageString.appBarListLogo2,
-      ImageString.appBarListLogo3,
-      ImageString.appBarListLogo1,
-      ImageString.appBarListLogo2,
-      ImageString.appBarListLogo3,
-    ];
     return ListView(
       children: [
         Container(
@@ -34,11 +18,11 @@ class BodyListView extends StatelessWidget {
           width: double.infinity,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
-            itemCount: appBarImageList.length + 1,
+            itemCount: ImageString.appBarImageList.length + 1,
             separatorBuilder: (BuildContext context, int index) {
               return ListviewListeElemanlari(
-                  imagePath: appBarImageList[index],
-                  logoPath: appBarLogoList[index]);
+                  imagePath: ImageString.appBarImageList[index],
+                  logoPath: ImageString.appBarLogoList[index]);
             },
             itemBuilder: (BuildContext context, int index) {
               return const SizedBox(width: 20);
