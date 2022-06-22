@@ -10,6 +10,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int secilenMenuItem = 0;
+  late List<Widget> pages;
+  @override
+  void initState() {
+    pages = [const MyHomePage(), const BodyListView()];
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +31,24 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: const BodyListView(),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: secilenMenuItem,
+        backgroundColor: Colors.grey.shade300,
+        onTap: (index) {
+          setState(() {
+            secilenMenuItem = index;
+          });
+        },
+        items: const [
+          Constants.bottomNavItem1,
+          Constants.bottomNavItem2,
+          Constants.bottomNavItem3,
+          Constants.bottomNavItem4,
+        ],
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+      ),
     );
   }
 }

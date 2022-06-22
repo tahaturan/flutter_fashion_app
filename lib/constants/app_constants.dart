@@ -26,4 +26,21 @@ class Constants {
       "Upgrade your skills at Istituto di Moda Burgo which since 1961 has trained thousands of students from 150 different countries and has branches around the world.";
   static final TextStyle defauldStringStyle =
       GoogleFonts.abel(color: Colors.grey);
+
+  static const bottomNavItem1 = BottomNavigationBarItem(
+    icon: Icon(Icons.navigation_outlined),
+    label: "1",
+  );
+  static const bottomNavItem2 = BottomNavigationBarItem(
+    icon: Icon(Icons.play_circle_outline),
+    label: "2",
+  );
+  static const bottomNavItem3 = BottomNavigationBarItem(
+    icon: Icon(Icons.adjust),
+    label: "3",
+  );
+  static const bottomNavItem4 = BottomNavigationBarItem(
+    icon: Icon(Icons.person),
+    label: "4",
+  );
 }
