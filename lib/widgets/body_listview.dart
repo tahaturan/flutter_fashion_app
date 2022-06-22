@@ -31,10 +31,7 @@ class BodyListView extends StatelessWidget {
                     ),
                     title: Text("Lara", style: Constants.anaBaslikStyle),
                     subtitle: const Text("35 mins ago"),
-                    trailing: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.more_vert),
-                    ),
+                    trailing: _cardInfodorpDownBtn(),
                   )
                 ],
               ),
@@ -42,6 +39,33 @@ class BodyListView extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+
+  DropdownButton<int> _cardInfodorpDownBtn() {
+    return DropdownButton(
+      underline: Container(),
+      icon: const Icon(
+        Icons.more_vert,
+        color: Colors.grey,
+      ),
+      items: [
+        DropdownMenuItem(
+          value: 1,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [Text("Send"), Icon(Icons.send)],
+          ),
+        ),
+        DropdownMenuItem(
+          value: 2,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [Text("Share"), Icon(Icons.share)],
+          ),
+        )
+      ],
+      onChanged: (deger) {},
     );
   }
 }
