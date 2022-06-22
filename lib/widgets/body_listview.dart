@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fashion_app/constants/app_constants.dart';
 import 'package:flutter_fashion_app/constants/image_string.dart';
-import 'package:flutter_fashion_app/widgets/listview_elemanlar.dart';
+import 'package:flutter_fashion_app/widgets/body_profile_list.dart';
 
 class BodyListView extends StatelessWidget {
   const BodyListView({
@@ -11,24 +12,35 @@ class BodyListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Container(
-          padding: const EdgeInsets.only(top: 10, right: 15, left: 8),
-          color: Colors.transparent,
-          height: 150,
-          width: double.infinity,
-          child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            itemCount: ImageString.appBarImageList.length + 1,
-            separatorBuilder: (BuildContext context, int index) {
-              return ListviewListeElemanlari(
-                  imagePath: ImageString.appBarImageList[index],
-                  logoPath: ImageString.appBarLogoList[index]);
-            },
-            itemBuilder: (BuildContext context, int index) {
-              return const SizedBox(width: 20);
-            },
+        const BodyProfileList(),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: SizedBox(
+            height: 400,
+            width: double.infinity,
+            child: Card(
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: const CircleAvatar(
+                      backgroundImage: AssetImage(ImageString.appBarListImage1),
+                    ),
+                    title: Text("Lara", style: Constants.anaBaslikStyle),
+                    subtitle: const Text("35 mins ago"),
+                    trailing: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.more_vert),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ),
-        ),
+        )
       ],
     );
   }

@@ -34,7 +34,15 @@ class ListviewListeElemanlari extends StatelessWidget {
           width: 80,
           height: 20,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  backgroundColor: Colors.blueAccent.shade200,
+                  duration: const Duration(seconds: 2),
+                  content: const Text("Kullanici Takip Edildi"),
+                ),
+              );
+            },
             style: ElevatedButton.styleFrom(
               primary: Constants.appbarBtnColor,
               shape: RoundedRectangleBorder(

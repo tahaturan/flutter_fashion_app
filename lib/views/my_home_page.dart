@@ -13,6 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.teal.shade100,
       appBar: AppBar(
         title: Text(Constants.anaBaslik, style: Constants.anaBaslikStyle),
         backgroundColor: Colors.transparent,
