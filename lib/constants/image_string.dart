@@ -24,4 +24,5 @@ class ImageString {
   static const String cardInfoImg1 = "assets/images/modelgrid1.jpeg";
   static const String cardInfoImg2 = "assets/images/modelgrid2.jpeg";
   static const String cardInfoImg3 = "assets/images/modelgrid3.jpeg";
+  static const String cardInfoImg4 = "assets/images/dress.jpg";
 }

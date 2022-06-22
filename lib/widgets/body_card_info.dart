@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fashion_app/constants/app_constants.dart';
 import 'package:flutter_fashion_app/constants/image_string.dart';
+import 'package:flutter_fashion_app/views/details_page.dart';
 import 'package:flutter_fashion_app/widgets/card_info_dropdown_btn.dart';
 
 class BodyCardInfo extends StatelessWidget {
@@ -44,21 +45,63 @@ class BodyCardInfo extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(right: 30),
-                      child: SizedBox(
-                        width: 150,
-                        child: Image.asset(ImageString.cardInfoImg1),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  Details(img: ImageString.cardInfoImg1),
+                            ),
+                          );
+                        },
+                        child: SizedBox(
+                          width: 150,
+                          child: Hero(
+                            tag: ImageString.cardInfoImg1,
+                            child: Image.asset(ImageString.cardInfoImg1),
+                          ),
+                        ),
                       ),
                     ),
                     Column(
                       children: [
-                        SizedBox(
-                          width: 95,
-                          child: Image.asset(ImageString.cardInfoImg2),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    Details(img: ImageString.cardInfoImg2),
+                              ),
+                            );
+                          },
+                          child: SizedBox(
+                            width: 95,
+                            child: Hero(
+                              tag: ImageString.appBarListImage2,
+                              child: Image.asset(ImageString.cardInfoImg2),
+                            ),
+                          ),
                         ),
                         const SizedBox(height: 10),
-                        SizedBox(
-                          width: 95,
-                          child: Image.asset(ImageString.cardInfoImg3),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    Details(img: ImageString.cardInfoImg3),
+                              ),
+                            );
+                          },
+                          child: SizedBox(
+                            width: 95,
+                            child: Hero(
+                              tag: ImageString.appBarListImage3,
+                              child: Image.asset(ImageString.cardInfoImg3),
+                            ),
+                          ),
                         ),
                       ],
                     )
