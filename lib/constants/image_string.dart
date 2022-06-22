@@ -21,4 +21,7 @@ class ImageString {
     ImageString.appBarListLogo2,
     ImageString.appBarListLogo3,
   ];
+  static const String cardInfoImg1 = "assets/images/modelgrid1.jpeg";
+  static const String cardInfoImg2 = "assets/images/modelgrid2.jpeg";
+  static const String cardInfoImg3 = "assets/images/modelgrid3.jpeg";
 }

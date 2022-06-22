@@ -13,7 +13,7 @@ class BodyCardInfo extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: SizedBox(
-        height: 400,
+        height: 500,
         width: double.infinity,
         child: Card(
           elevation: 5,
@@ -37,6 +37,117 @@ class BodyCardInfo extends StatelessWidget {
                   style: Constants.defauldStringStyle,
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 30),
+                      child: SizedBox(
+                        width: 150,
+                        child: Image.asset(ImageString.cardInfoImg1),
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: 95,
+                          child: Image.asset(ImageString.cardInfoImg2),
+                        ),
+                        const SizedBox(height: 10),
+                        SizedBox(
+                          width: 95,
+                          child: Image.asset(ImageString.cardInfoImg3),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 130,
+                    height: 20,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.grey,
+                        onPrimary: Colors.black.withOpacity(0.7),
+                      ),
+                      onPressed: () {},
+                      child: const Text(
+                        "# Louis vuitton",
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  SizedBox(
+                    width: 100,
+                    height: 20,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.grey,
+                        onPrimary: Colors.black.withOpacity(0.7),
+                      ),
+                      onPressed: () {},
+                      child: const Text(
+                        "# Chloe",
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Divider(
+                color: Colors.grey.withOpacity(0.5),
+                thickness: 2,
+                height: 50,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.reply_outlined,
+                          color: Colors.grey,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          "1.7k",
+                          style: Constants.defauldStringStyle,
+                        ),
+                        const SizedBox(width: 20),
+                        const Icon(
+                          Icons.comment,
+                          color: Colors.grey,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          "380",
+                          style: Constants.defauldStringStyle,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          "5.6k",
+                          style: Constants.defauldStringStyle,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
